@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import AuthSide from "../components/AuthSide";
-import Register from "../components/Register";
-import Login from "../components/Login";
+import AuthSide from "../components/Auth/AuthSide";
+import Register from "../components/Auth/Register";
+import Login from "../components/Auth/Login";
 export default function Auth() {
 const [auth,setAuth] = useState('Register')
 const changeAuth = (auth)=>{
