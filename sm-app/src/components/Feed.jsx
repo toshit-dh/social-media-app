@@ -37,8 +37,8 @@ export default function Feed({ changeMenu }) {
               />
             </div>
             <div className="challenges">
-              <Posts changeMenu={changeMenu} />
-              <Challenge />
+              <Posts changeMenu={changeMenu} className="posts"/>
+              <Challenge className="challenges"/>
             </div>
           </Container2>
         </>
@@ -55,8 +55,8 @@ const Container = styled.div`
   border-radius: 3rem;
 `;
 const Container2 = styled.div`
-  height: 100vh;
-  width: 100%;
+  height: 98vh;
+  width: 99%;
   display: grid;
   grid-template-rows: 20% 80%;
   background-color: #3c3f51;
@@ -69,5 +69,8 @@ const Container2 = styled.div`
     width: 100%;
     display: grid;
     grid-template-columns: 50% 50%;
+    .posts,.challenges{
+      height: 100%;
+    }
   }
 `;

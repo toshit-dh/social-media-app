@@ -105,7 +105,7 @@ export default function Stories({
 }
 
 const Container = styled.div`
-  padding: 1rem 0 0 2rem;
+  padding: 0 0 0 2rem;
   .stories {
     padding: 1rem;
     width: 100%;

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import App from "../../assets/logo.png";
-import Logo from "../../assets/download.jpeg";
+import Logo from "../../assets/logo.png";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {
@@ -47,7 +47,7 @@ export default function Post() {
                 <div
                   className="comment btn"
                   onClick={() => {
-                    setSelectedButton("Comment")
+                    setSelectedButton("Comment");
                     setModalOpen([true, "Comments"]);
                   }}
                 >
@@ -88,11 +88,9 @@ export default function Post() {
             </div>
           </div>
           <div className="image">
-            <Carousel className="slider">
+            <Carousel className="slider" autoPlay>
               {arr.map((_, index) => (
-                <>
-                  <img src={Logo} alt="" key={index} />
-                </>
+                <img src={Logo} alt="" key={index} />
               ))}
             </Carousel>
             {modalOpen && (
@@ -121,7 +119,6 @@ const Container = styled.div`
     .side1 {
       display: flex;
       flex-direction: column;
-      border-right: 0.1rem solid #4e3eff;
       .top {
         display: flex;
         justify-content: space-between;
@@ -141,7 +138,6 @@ const Container = styled.div`
             width: 3rem;
             border-radius: 1.5rem;
             padding: 0.1rem;
-            border: 0.1rem solid #4e3eff;
           }
         }
         .side2 {
@@ -176,9 +172,11 @@ const Container = styled.div`
         .slider {
           width: 100%;
           img {
-            object-fit: fill;
+            max-width: 100%;
+            @media screen and (min-width: 1400px){
+              height: 26rem;
+            }
             border-bottom-left-radius: 0.5rem;
-            width: 100%;
           }
         }
       }
