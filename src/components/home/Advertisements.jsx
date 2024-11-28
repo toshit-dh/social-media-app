@@ -30,20 +30,16 @@ export default function Advertisements({ size }) {
             className="rounded-full object-cover w-6 h-6"
           />
           <span className="text-blue-500 font-medium">Toshit Hole</span>
+          </div>
           <p className={`${size == "sm" ? "text-xs" : "text-sm"}`}>
             {
               size == "sm" ? "Lorem ipsum dolor, sit amet consectetur adipisicing elit." :
               size == "md" ? "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit laboriosam vero doloribus sunt beatae neque rem autem.":
               "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque possimus, facere recusandae ab, rerum modi libero quidem, earum neque aut iure dolorem aliquid doloribus perspiciatis vero voluptate laudantium accusamus qui."
             }
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum
-            saepe maiores placeat adipisci quis beatae, necessitatibus earum,
-            ipsam distinctio quae, voluptates illum? Corrupti libero suscipit
-            quam natus qui soluta aut!
           </p>
           <button className="bg-gray-200 text-gray-500 p-2 text-xs rounded-l">Learn More</button>
         </div>
       </div>
-    </div>
   );
 }
