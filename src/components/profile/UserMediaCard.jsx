@@ -13,9 +13,9 @@ export default function UserMediaCard({ userId }) {
       </div>
       <div className="flex gap-4 justify-between flex-wrap">
         <div className="relative w-1/5 h-24">
-        <Image src="/like.png" alt="photos"/>
+          <Image src="/like.png" alt="photos" fill />
         </div>
       </div>
-      </div>
+    </div>
   );
 }
